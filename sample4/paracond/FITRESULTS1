@@ -1,0 +1,135 @@
+Notes: 
+	- none of these results seem correct because the data may not be right. 
+	- temperature is negative
+############################################################################################################################
+
+/home/saila/Desktop/APL/py3_venv/bin/python3.5 /home/saila/Desktop/APL/HTC/DataAnalysis/sample4/odr_fit_to_data.py
+***********************************************************
+               ORTHOGONAL DISTANCE REGRESSION
+Python 3.5.2 (default, Nov 17 2016, 17:05:23) 
+[GCC 5.4.0 20160609]
+Scipy:0.19.1, Numpy:1.13.1, Matplotlib:2.0.2
+***********************************************************
+
+ODR algorithm stop reason: Sum of squares convergence
+
+Fit 7968 Data points from file: paraDatawError.txt
+To Model :
+  def HTC(p, x) :
+    #Tc                             : p[0]
+    #alpha                          : p[1]
+    return -(x - p[0])**(-p[1])
+
+Estimated parameters and uncertainties
+   p[0] =    -214.42 +/- 4.3265e+13          (Starting guess:         90)
+   p[1] =     4.9925 +/- 1.1866e+11          (Starting guess:        0.5)
+
+Standard Covariance Matrix : 
+ [[  1.41266916e+24   3.87313184e+21]
+ [  3.87313184e+21   1.06271061e+19]] 
+
+
+Correlation Matrix :
+ 1       1      
+ 1       1      
+
+Quasi Chi-Squared/dof   = 1325.03809, Chi-Squared CDF =    0.00000%
+   WARNING:Above CDF is not valid for large x uncertainties!
+
+To use Monte Carlo simulation to more accurately estimate
+       CDF for large x uncertainties, re-run program with 
+     "Run_Monte_Carlo_CDF_Estimator = True" and
+     "Number_of_MC_iterations >= 1000." This may take some time
+
+Run_Monte_Carlo_CDF_Estimator = True
+
+**** Running Monte Carlo CDF Estimator ****
+/home/saila/Desktop/APL/HTC/DataAnalysis/sample4/odr_fit_to_data.py:116: RuntimeWarning: overflow encountered in power
+  return -(x - p[0])**(-p[1])
+/home/saila/Desktop/APL/HTC/DataAnalysis/sample4/odr_fit_to_data.py:116: RuntimeWarning: invalid value encountered in power
+  return -(x - p[0])**(-p[1])
+Number_of_MC_iterations = 11 simulations in 8.887268 seconds.
+
+Fraction of quasi-chisquared values larger than observed value:
+    Monte Carlo CDF =   27.3%
+    Minimum, Mean, and Maximum Quasi Chi-Squared values:  0.99 1.4e+03  8e+03
+
+Average and Standard Deviation of MC Fit parameters
+[array([-206.05818235,    3.08373834]), array([ -2.31602985e+04,   8.30276303e-01]), array([ 21.18050101,   2.14285774]), array([-214.41820663,    4.99246794]), array([ 72.34358772,   2.54315642]), array([-6518.75851192,  1276.0365493 ]), array([-214.41820663,    4.99246794]), array([-7843.82894535,  1482.64931773]), array([-214.41820663,    4.99246794]), array([-214.41820663,    4.99246794]), array([-205.7191389,    3.3370904])]
+   p[0] =     -3518.07 +/-      6772.59 ; (Min = -23160.298470, Max =    72.343588
+   p[1] =       253.69 +/-      532.465 ; (Min =     0.830276, Max =  1482.649318
+
+Check for any Fit Biases in MC Fit parameters(Significance and ratio)
+   p[0] = -1.54    (16.40753    +/--9.988342   )
+   p[1] =  1.48    (50.8146     +/-33.72683    )
+
+Process finished with exit code 0
+
+############################################################################################################################
+
+To Model :
+  def HTC(p, x) :
+    #Tc                             : p[0]
+    #alpha                          : p[1]
+    return -(x - p[0])**(-p[1])
+
+Estimated parameters and uncertainties
+   p[0] =    -191.42 +/- 6.7407e+11          (Starting guess:         77)
+   p[1] =     4.3295 +/- 1.7513e+09          (Starting guess:        0.5)
+
+############################################################################################################################
+To Model :
+/home/saila/Desktop/APL/HTC/DataAnalysis/sample4/odr_fit_to_data.py:245: RuntimeWarning: invalid value encountered in double_scalars
+  format(cov[i,j]/numpy.sqrt(cov[i,i]*cov[j,j])), end="")
+  def HTC(p, x) :
+    #Tc                             : p[0]
+    #alpha                          : p[1]
+    return 1/((-x - p[0])**(p[1]))
+
+Estimated parameters and uncertainties
+   p[0] =         77 +/-        nan          (Starting guess:         77)
+   p[1] =        0.5 +/-        nan          (Starting guess:        0.5)
+
+############################################################################################################################
+
+To Model :
+/home/saila/Desktop/APL/HTC/DataAnalysis/sample4/odr_fit_to_data.py:203: RuntimeWarning: invalid value encountered in true_divide
+  uncertainty = uncertainty/numpy.sqrt(quasi_chisq)
+  def HTC(p, x) :
+    #Tc                             : p[0]
+    #alpha                          : p[1]
+    return 1/((-x - p[0])**(p[1]))
+
+Estimated parameters and uncertainties
+   p[0] =         77 +/-        nan          (Starting guess:         77)
+   p[1] =        0.5 +/-        nan          (Starting guess:        0.5)
+
+############################################################################################################################
+
+To Model :
+  def HTC(p, x) :
+/home/saila/Desktop/APL/HTC/DataAnalysis/sample4/odr_fit_to_data.py:245: RuntimeWarning: invalid value encountered in double_scalars
+    #Tc                             : p[0]
+  format(cov[i,j]/numpy.sqrt(cov[i,i]*cov[j,j])), end="")
+    #alpha                          : p[1]
+    return -1/((-x - p[0])**(p[1]))
+
+Estimated parameters and uncertainties
+   p[0] =         77 +/-        nan          (Starting guess:         77)
+   p[1] =        0.5 +/-        nan          (Starting guess:        0.5)
+
+############################################################################################################################
+
+To Model :
+  def HTC(p, x) :
+    #Tc                             : p[0]
+    #alpha                          : p[1]
+    return -(x - p[0])**(-p[1])
+
+Estimated parameters and uncertainties
+   p[0] =  -0.030139 +/- 4.0376e+11          (Starting guess:          0)
+   p[1] =     5.6621 +/- 5.0474e+09          (Starting guess:          0)
+############################################################################################################################
+
+
+

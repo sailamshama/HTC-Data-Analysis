@@ -1,0 +1,70 @@
+/home/saila/Desktop/APL/py3_venv/bin/python3.5 /home/saila/Desktop/APL/HTC/DataAnalysis/sample4/odr_fit_to_data.py
+***********************************************************
+               ORTHOGONAL DISTANCE REGRESSION
+Python 3.5.2 (default, Nov 17 2016, 17:05:23) 
+[GCC 5.4.0 20160609]
+Scipy:0.19.1, Numpy:1.13.1, Matplotlib:2.0.2
+***********************************************************
+
+ODR algorithm stop reason: Parameter convergence
+
+Fit 15223 Data points from file: linearDatawError.txt
+To Model :
+  def Linear(p,x) :
+    # A linear function with:
+    #   Constant Background          : p[0]
+    #   Slope                        : p[1]
+    return p[0]+p[1]*x
+
+Estimated parameters and uncertainties
+   p[0] =    0.40157 +/- 0.00066144          (Starting guess:     0.4016)
+   p[1] =  0.0017209 +/- 2.6106e-06          (Starting guess:   0.001721)
+
+Standard Covariance Matrix : 
+ [[  4.37497071e-07  -1.69734939e-09]
+ [ -1.69734939e-09   6.81542566e-12]] 
+
+
+Correlation Matrix :
+ 1      -0.983  
+-0.983   1      
+
+Quasi Chi-Squared/dof   =    0.01003, Chi-Squared CDF =  100.00000%
+   WARNING:Above CDF is not valid for large x uncertainties!
+
+To use Monte Carlo simulation to more accurately estimate
+       CDF for large x uncertainties, re-run program with 
+     "Run_Monte_Carlo_CDF_Estimator = True" and
+     "Number_of_MC_iterations >= 1000." This may take some time
+
+Run_Monte_Carlo_CDF_Estimator = True
+
+**** Running Monte Carlo CDF Estimator ****
+Number_of_MC_iterations = 11 simulations in 4.978508 seconds.
+
+Fraction of quasi-chisquared values larger than observed value:
+    Monte Carlo CDF =  100.0%
+    Minimum, Mean, and Maximum Quasi Chi-Squared values:  0.98   0.99      1
+
+Average and Standard Deviation of MC Fit parameters
+[array([ 0.40056186,  0.00172421]), array([ 0.40127608,  0.00172165]), array([ 0.40042612,  0.00172567]), array([ 0.40140118,  0.00172087]), array([ 0.40122462,  0.00172272]), array([ 0.4013677 ,  0.00172159]), array([ 0.40092232,  0.00172256]), array([ 0.4027943 ,  0.00171552]), array([ 0.40211009,  0.00171915]), array([ 0.40011074,  0.00172758]), array([ 0.40089306,  0.00172282])]
+   p[0] =      0.40119 +/-  0.000726625 ; (Min =     0.400111, Max =     0.402794
+   p[1] =   0.00172221 +/-  3.04646e-06 ; (Min =     0.001716, Max =     0.001728
+
+Check for any Fit Biases in MC Fit parameters(Significance and ratio)
+   p[0] = -1.68    (0.999041    +/-0.0005721944)
+   p[1] =  1.36    (1.000764    +/-0.0005598094)
+#################################################################################################################################
+MATLAB
+Linear model Poly1:
+     f(x) = p1*x + p2
+Coefficients (with 95% confidence bounds):
+       p1 =    0.001721  (0.00172, 0.001721)
+       p2 =      0.4016  (0.4014, 0.4017)
+
+Goodness of fit:
+  SSE: 0.03436
+  R-square: 0.9996
+  Adjusted R-square: 0.9996
+  RMSE: 0.001503
+

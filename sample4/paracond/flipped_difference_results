@@ -1,0 +1,12 @@
+General model:
+     f(x) = 1/((x-a)^b)
+Coefficients (with 95% confidence bounds):
+       a =  -2.013e+05  (-1.635e+08, 1.631e+08)
+       b =      0.2727  (-17.83, 18.38)
+
+Goodness of fit:
+  SSE: 2.349
+  R-square: -4.728e-05
+  Adjusted R-square: -0.0001728
+  RMSE: 0.01717
+

@@ -1,0 +1,48 @@
+/home/saila/Desktop/APL/py3_venv/bin/python3.5 /home/saila/Desktop/APL/HTC/DataAnalysis/sample3/paracond/odr_fit_to_data.py
+/home/saila/Desktop/APL/HTC/DataAnalysis/sample3/paracond/odr_fit_to_data.py:116: RuntimeWarning: invalid value encountered in power
+  return 1/((x - p[0])**(p[1]))
+***********************************************************
+               ORTHOGONAL DISTANCE REGRESSION
+Python 3.5.2 (default, Nov 17 2016, 17:05:23) 
+[GCC 5.4.0 20160609]
+Scipy:0.19.1, Numpy:1.13.1, Matplotlib:2.0.2
+***********************************************************
+
+ODR algorithm stop reason: Numerical error detected
+
+Fit 5823 Data points from file: diffDatawError.txt
+To Model :
+/home/saila/Desktop/APL/HTC/DataAnalysis/sample3/paracond/odr_fit_to_data.py:203: RuntimeWarning: invalid value encountered in true_divide
+  uncertainty = uncertainty/numpy.sqrt(quasi_chisq)
+  def HTC(p, x) :
+    #Tc                             : p[0]
+    #alpha                          : p[1]
+    return 1/((x - p[0])**(p[1]))
+
+Estimated parameters and uncertainties
+   p[0] =         92 +/-        nan          (Starting guess:         92)
+   p[1] =        1.1 +/-        nan          (Starting guess:        1.1)
+
+Standard Covariance Matrix : 
+ [[ 0.  0.]
+ [ 0.  0.]] 
+
+
+Correlation Matrix :
+ nan     nan    
+ nan     nan    
+/home/saila/Desktop/APL/HTC/DataAnalysis/sample3/paracond/odr_fit_to_data.py:245: RuntimeWarning: invalid value encountered in double_scalars
+  format(cov[i,j]/numpy.sqrt(cov[i,i]*cov[j,j])), end="")
+
+Quasi Chi-Squared/dof   =    0.00000, Chi-Squared CDF =  100.00000%
+   WARNING:Above CDF is not valid for large x uncertainties!
+
+To use Monte Carlo simulation to more accurately estimate
+       CDF for large x uncertainties, re-run program with 
+     "Run_Monte_Carlo_CDF_Estimator = True" and
+     "Number_of_MC_iterations >= 1000." This may take some time
+
+Run_Monte_Carlo_CDF_Estimator = True
+
+**** Running Monte Carlo CDF Estimator ****
+

@@ -1,0 +1,56 @@
+/home/saila/Desktop/APL/py3_venv/bin/python3.5 /home/saila/Desktop/APL/HTC/DataAnalysis/sample3/paracond/odr_fit_to_data.py
+***********************************************************
+               ORTHOGONAL DISTANCE REGRESSION
+Python 3.5.2 (default, Nov 17 2016, 17:05:23) 
+[GCC 5.4.0 20160609]
+Scipy:0.19.1, Numpy:1.13.1, Matplotlib:2.0.2
+***********************************************************
+
+ODR algorithm stop reason: Sum of squares convergence
+
+Fit 5823 Data points from file: diffDatawError.txt
+To Model :
+  def HTC(p, x) :
+    #Tc                             : p[0]
+    #alpha                          : p[1]
+    return 1/((x - p[0])**(p[1]))
+
+Estimated parameters and uncertainties
+   p[0] =     83.764 +/-   0.042271          (Starting guess:         77)
+   p[1] =     1.5652 +/-  0.0065067          (Starting guess:          0)
+
+Standard Covariance Matrix : 
+ [[  1.78683647e-03   2.47186582e-04]
+ [  2.47186582e-04   4.23372400e-05]] 
+
+
+Correlation Matrix :
+ 1       0.899  
+ 0.899   1      
+
+Quasi Chi-Squared/dof   =    0.70953, Chi-Squared CDF =  100.00000%
+   WARNING:Above CDF is not valid for large x uncertainties!
+
+To use Monte Carlo simulation to more accurately estimate
+       CDF for large x uncertainties, re-run program with 
+     "Run_Monte_Carlo_CDF_Estimator = True" and
+     "Number_of_MC_iterations >= 1000." This may take some time
+
+Run_Monte_Carlo_CDF_Estimator = True
+
+**** Running Monte Carlo CDF Estimator ****
+Number_of_MC_iterations = 11 simulations in 0.48083600000000004 seconds.
+
+Fraction of quasi-chisquared values larger than observed value:
+    Monte Carlo CDF =  100.0%
+    Minimum, Mean, and Maximum Quasi Chi-Squared values:  0.97      1      1
+
+Average and Standard Deviation of MC Fit parameters
+[array([ 83.79310372,   1.56804804]), array([ 83.77096691,   1.56779967]), array([ 83.67243357,   1.55271839]), array([ 83.73657052,   1.55642994]), array([ 83.79450683,   1.57049633]), array([ 83.77489855,   1.56576536]), array([ 83.71648022,   1.54994884]), array([ 83.67346352,   1.5553001 ]), array([ 83.74789174,   1.56173777]), array([ 83.82870325,   1.57137022]), array([ 83.72762983,   1.55697472])]
+   p[0] =      83.7488 +/-    0.0474433 ; (Min =    83.672434, Max =    83.828703
+   p[1] =      1.56151 +/-   0.00722581 ; (Min =     1.549949, Max =     1.571370
+
+Check for any Fit Biases in MC Fit parameters(Significance and ratio)
+   p[0] = -1.00    (0.9998204   +/-0.0001791093)
+   p[1] = -1.64    (0.9976106   +/-0.001459833 )
+
